@@ -7,29 +7,29 @@
   color white
   .main
     width 100%
-    height calc(100% - 100px)
+    height calc(100% - 50px)
     margin-top -15px
 .map 
   width 100%
   height calc(100% - 100px)
 
-.auth,.client 
-  height 300px
+.age,.client 
+  margin 0 auto
 </style>
 
 <template>
 <div class="fansChart">
   <v-header :name="name" :legendArr="legendArr" :myChart="myChart"></v-header>
   <div class="main">
-    <table border="0" style="width:100%">
+    <table border="0" style="width:100%;height:100%">
       <tr>
         <td style="width:60%!important">
           <div class="map" style="height:600px;"></div>
         </td>
         <td style="width:40%!important;">
-          <div class="cont" style="">
-            <div class="auth"></div>
+          <div class="cont" style=""> 
             <div class="client"></div>
+            <div class="age"></div>
           </div>
         </td>
       </tr>
@@ -61,7 +61,8 @@ export default {
       name: '用户群体画像',
       mapChart: {},
       authPie: {},
-      clientPie: {}
+      clientPie: {},
+      ageBar:{}
     }
   },
   methods: {
@@ -69,9 +70,20 @@ export default {
       // this.$root.charts.push(this.myChart)
       window.addEventListener('resize', function() {
         this.mapChart.resize();
-        this.authPie.resize();
+        this.ageBar.resize();
         this.clientPie.resize();
       }.bind(this))
+    },
+    jsonToArray (json, key) {
+      var data = [];
+        for(var i in json){
+          if (key == 'value') {
+            data.push(json[i].value);
+          } else if(key == 'name') {
+            data.push(json[i].name);
+          }
+        }
+        return data;
     },
     drawMap (data) {
         this.mapChart = echarts.init(document.querySelector('.map'));
@@ -146,7 +158,7 @@ export default {
               data: data,
               label: {
                 normal: {
-                  formatter: '{b}\n {d}%',
+                  formatter: '{b}年：\n{d}%',
                     textStyle: {
                         color: 'white',
                         fontSize: 16,
@@ -176,7 +188,7 @@ export default {
               }
           }],
           color: [
-              '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074'
+              '#61a0a8', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3','#2f4554'
           ]
       });
     },
@@ -245,6 +257,119 @@ export default {
           //     '#255B78', '#4a9c96','#2e526f','#346276', '#418689',  '#54b3a5', '#60c2c7','#51D4EB','#6acfff'
           // ]
       });
+    },
+    drawAgeBar(data) {
+      var divAuth = document.querySelector('.age');
+      // divAuth.style.width = (divAuth.offsetWidth * 0.80 )+"px";
+      divAuth.style.height = (divAuth.offsetWidth * 0.70 )+"px";
+      divAuth.style.width = (divAuth.offsetWidth * 0.90 )+"px";
+      this.authPie = echarts.init(divAuth);
+      this.authPie.setOption({
+        title: {
+            text: '评论数量-年龄分布',
+            left: 'center',
+            top:20,
+            textStyle: {
+              color: 'white',
+              fontSize: 18
+            }
+        },
+        color: ['#3398DB'],
+        tooltip : {
+            trigger: 'axis',
+            formatter: "{b}年 <br/>{a} : {c} ",
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '5%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : this.jsonToArray(data, 'name'),
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLine: {
+                  lineStyle: {
+                    color: 'rgba(235, 235, 235, 0.69)'
+                  }
+                },
+                axisLabel: {
+                  rotate: -30,
+                  textStyle: {
+                    color: 'white'
+                  }
+                }
+            }
+        ],
+        yAxis : [
+            {
+                // type : 'category',
+                // data : ['10','20','30','40'],
+                nameTextStyle: {
+                  color: 'rgba(255, 255, 255, 0.69)'
+                },
+                splitLine: {
+                  lineStyle: {
+                    color: ['rgba(230, 230, 230, 0.2)']
+                  }
+                },
+                axisLine: {
+                  lineStyle: {
+                    color: 'rgba(235, 235, 235, 0.69)'
+                  }
+                },
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        series : [
+            {
+                name:'评论数量',
+                type:'bar',
+                barWidth: '40%',
+                data:this.jsonToArray(data, 'value')
+            },
+            
+        ],
+        label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    formatter: '{c}',
+                    color: 'white'
+                }
+            },
+        itemStyle: {
+                    normal: {
+
+                      color: function(params) { 
+                        　//首先定义一个数组 
+                        var colorList = [ 
+                        '#ee5828','#d16621', '#d59326', '#c18e23','#a8b168','#a1aa5b', '#94be85', '#90b97b','#7ccea9'
+                        ]; 
+                        return colorList[params.dataIndex] 
+                        }, 
+                    
+                        // color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        //     offset: 0,
+                        //     color: 'rgba(212,97,34, 1)'
+                        // }, {
+                        //     offset: 1,
+                        //     color: 'rgba(134,197,149, 0.6)'
+                        // }]),
+                        shadowColor: 'rgba(255, 255, 255, 0.1)',
+                        shadowBlur: 10
+                    }
+                }
+      })
     }
   },
   components: {
@@ -256,8 +381,9 @@ export default {
         this.fansData = res.data;
 
         this.drawMap(res.data.geo);
-        this.drawAuthPie(res.data.authinfo);
+        // this.drawAuthPie(res.data.age);
         this.drawClientPie(res.data.clientInfo, res.data.sex);
+        this.drawAgeBar(res.data.age);
       })
 
       this._init();

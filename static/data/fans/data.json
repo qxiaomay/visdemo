@@ -152,9 +152,6 @@
     "clientInfo": [{
             "value": 30632,
             "name": "iPhone"
-        }, {
-            "value": 14068,
-            "name": "Android"
         },
         {
             "value": 32469,
@@ -166,6 +163,9 @@
             "value": 6338,
             "name": "华为"
         }, {
+            "value": 14068,
+            "name": "Android"
+        }, {
             "value": 9638,
             "name": "网页"
         }, {
@@ -174,12 +174,53 @@
         }
     ],
     "sex": [{
-            "value": 679,
+            "value": 20,
             "name": "男"
         },
         {
-            "value": 1548,
+            "value": 80,
             "name": "女"
+        }
+    ],
+    "age": [{
+            "value": 7406,
+            "name": "1998"
+        },
+        {
+            "value": 7316,
+            "name": "2000"
+        },
+        {
+            "value": 7241,
+            "name": "1999"
+        },
+        {
+            "value": 7086,
+            "name": "1997"
+        },
+        {
+            "value": 6326,
+            "name": "1996"
+        },
+        {
+            "value": 6000,
+            "name": "2001"
+        },
+        {
+            "value": 5804,
+            "name": "2002"
+        },
+        {
+            "value": 5356,
+            "name": "1995"
+        },
+        {
+            "value": 4102,
+            "name": "1990"
+        },
+        {
+            "value": 3965,
+            "name": "1994"
         }
     ]
 }
