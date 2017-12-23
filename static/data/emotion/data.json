@@ -1,0 +1,77 @@
+{
+    "score": 800,
+    "keywords": {
+        "positive": [{
+                "name": "祝福",
+                "value": 340
+            },
+            {
+                "name": "祝福",
+                "value": 340
+            },
+            {
+                "name": "祝福",
+                "value": 340
+            },
+            {
+                "name": "祝福",
+                "value": 340
+            },
+            {
+                "name": "祝福",
+                "value": 340
+            },
+            {
+                "name": "祝福",
+                "value": 340
+            },
+            {
+                "name": "祝福",
+                "value": 340
+            },
+            {
+                "name": "祝福",
+                "value": 340
+            },
+            {
+                "name": "祝福",
+                "value": 340
+            },
+            {
+                "name": "祝福",
+                "value": 340
+            }
+        ],
+        "negative": [{
+            "name": "分手",
+            "value": 288
+        }, {
+            "name": "分手",
+            "value": 288
+        }, {
+            "name": "分手",
+            "value": 288
+        }, {
+            "name": "分手",
+            "value": 288
+        }, {
+            "name": "分手",
+            "value": 288
+        }, {
+            "name": "分手",
+            "value": 288
+        }, {
+            "name": "分手",
+            "value": 288
+        }, {
+            "name": "分手",
+            "value": 288
+        }, {
+            "name": "分手",
+            "value": 288
+        }, {
+            "name": "分手",
+            "value": 288
+        }]
+    }
+}
