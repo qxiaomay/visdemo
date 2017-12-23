@@ -73,7 +73,7 @@ export default {
               },
               formatter: '{value} 时'
             },
-            data: this.jsonToArray(res.data.weiboTimeLine, 'time') 
+            data: this.jsonToArray(res.data.timeLine, 'time') 
           },
           yAxis: {
             name: '数量',
@@ -128,7 +128,7 @@ export default {
             }, {
               gt: 400,
               lte: 600,
-              color: '#660099'
+              color: '#ed00ff'
             }, {
               gt: 600,
               color: '#7e0023'
@@ -142,7 +142,7 @@ export default {
             type: 'line',
             symbol: 'circle',
             symbolSize: 8,
-            data: this.jsonToArray(res.data.weiboTimeLine, 'num'),
+            data: this.jsonToArray(res.data.timeLine, 'num'),
             markLine: {
               silent: true,
               data: [{
