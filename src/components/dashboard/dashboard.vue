@@ -1,5 +1,8 @@
 <template lang="html">
   <div class="dashboard">
+    <div>
+      <p>鹿晗关晓彤公开恋情事件微博数据可视化系统</p>
+    </div>
     <div class="flex-container column">
         <div class="item one" @click="clickChart('1')" style="transform: translate(-22.4%,-37.5%) scale(0.25)">
           <themeRiver></themeRiver>
@@ -84,6 +87,12 @@ export default {
   height 100%!important
   width 100%!important
   background none!important
+p
+  color white
+  font-size 40px
+  font-weight bold
+  text-align center
+  padding-bottom 2%
 .item
     padding: 0px;
     margin-left: -5%;
@@ -100,7 +109,7 @@ export default {
     height 100%
     margin:0px;
     padding:0px;
-    padding-top 5%
+    padding-top 3%
     background url('../../assets/bg1.jpg');
     background-size 100% 100%
 .flex-container.column

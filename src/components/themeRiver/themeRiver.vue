@@ -75,7 +75,7 @@ export default {
             },
 
             legend: {
-                data: ['DQ', 'TY', 'SS', 'QG', 'SY', 'DD'],
+                data: ['鹿晗关晓彤恋情', '鹿晗迪丽热巴', '鹿晗回国三周年', '上海堡垒', '甜蜜暴击', '粉丝脱粉'],
                 textStyle: {
                     color: 'white'
                 }
