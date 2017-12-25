@@ -75,10 +75,23 @@ export default {
             },
 
             legend: {
-                data: ['鹿晗关晓彤恋情', '鹿晗迪丽热巴', '鹿晗回国三周年', '上海堡垒', '甜蜜暴击', '粉丝脱粉'],
+                top:20,
+                data: ['鹿晗关晓彤恋情', '鹿晗迪丽热巴', '鹿晗回国三周年', '上海堡垒', '甜蜜暴击', '鹿晗关晓彤分手了吗','鹿饭一直在','关晓彤公布恋情首亮相','轩辕剑之汉之云'],
                 textStyle: {
                     color: 'white'
-                }
+                },
+                selected: {
+                        '鹿晗关晓彤恋情': true,
+                        '鹿晗迪丽热巴': true,
+                        '鹿晗回国三周年':true,
+                        '上海堡垒':true,
+                        '甜蜜暴击':true,
+                        '鹿晗关晓彤分手了吗':true,
+                        '鹿饭一直在':true,
+                        '关晓彤公布恋情首亮相':true,
+                        '关晓彤公布恋情首亮相':false,
+                        '轩辕剑之汉之云':true
+                    }
             },
 
             singleAxis: {
@@ -117,14 +130,16 @@ export default {
                 },
                 label: {
                     normal: {
-                        color: 'white',
-                        fontSize: 18,
-                        position: 'left',
-                        distance: 50
+                        show:false
+                        // color: 'white',
+                        // fontSize: 18,
+                        // position: 'left',
+                        // distance: 50
                     }
                 },
                 data: this.jsonToArray(res.data)
-            }]
+            }],
+            color:['#2f4554', '#61a0a8', '#d48265', '#91c7ae','#c23531','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3']
         });
     })
     this._init()
