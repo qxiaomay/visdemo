@@ -2,6 +2,8 @@
 
 > a vis demo project
 
+> 鹿晗关晓彤公开恋情事件微博数据可视化分析系统
+
 ## Build Setup
 
 ``` bash

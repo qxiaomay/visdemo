@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="dashboard">
     <div>
-      <p>鹿晗关晓彤公开恋情事件微博数据可视化系统</p>
+      <p>鹿晗关晓彤公开恋情事件微博数据可视化分析系统</p>
     </div>
     <div class="flex-container column">
         <div class="item one" @click="clickChart('1')" style="transform: translate(-22.4%,-37.5%) scale(0.25)">
