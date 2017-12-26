@@ -49,7 +49,7 @@ export default {
           if (key == 'time') {
             data.push(json[i].time);
           } else if(key == 'num') {
-            data.push(json[i].num);
+            data.push(json[i].num*8);
           }
         }
         return data;
@@ -111,26 +111,26 @@ export default {
             },
             pieces: [{
               gt: 0,
-              lte: 100,
+              lte: 1000,
               color: '#096'
             }, {
-              gt: 100,
-              lte: 200,
+              gt: 1000,
+              lte: 2000,
               color: '#ffde33'
             }, {
-              gt: 200,
-              lte: 300,
+              gt: 2000,
+              lte: 3000,
               color: '#ff9933'
             }, {
-              gt: 300,
-              lte: 400,
+              gt: 3000,
+              lte: 4000,
               color: '#cc0033'
             }, {
-              gt: 400,
-              lte: 600,
+              gt: 4000,
+              lte: 6000,
               color: '#ed00ff'
             }, {
-              gt: 600,
+              gt: 6000,
               color: '#7e0023'
             }],
             outOfRange: {
@@ -138,7 +138,7 @@ export default {
             }
           },
           series: [{
-            name: '微博',
+            name: '评论数量',
             type: 'line',
             symbol: 'circle',
             symbolSize: 8,
@@ -146,15 +146,15 @@ export default {
             markLine: {
               silent: true,
               data: [{
-                yAxis: 100
+                yAxis: 1000
               }, {
-                yAxis: 200
+                yAxis: 2000
               }, {
-                yAxis: 300
+                yAxis: 3000
               }, {
-                yAxis: 400
+                yAxis: 4000
               }, {
-                yAxis: 600
+                yAxis: 6000
               }]
             }
           }]
