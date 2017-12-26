@@ -1,77 +1,79 @@
 {
-    "score": 800,
+    "score": 590,
     "keywords": {
         "positive": [{
-                "name": "祝福",
-                "value": 340
+                "name": "喜欢",
+                "value": 18558
             },
             {
                 "name": "祝福",
-                "value": 340
+                "value": 15311
             },
             {
-                "name": "祝福",
-                "value": 340
+                "name": "幸福",
+                "value": 8120
             },
             {
-                "name": "祝福",
-                "value": 340
+                "name": "支持",
+                "value": 7498
             },
             {
-                "name": "祝福",
-                "value": 340
+                "name": "甜蜜",
+                "value": 4169
             },
             {
-                "name": "祝福",
-                "value": 340
+                "name": "开心",
+                "value": 3553
             },
             {
-                "name": "祝福",
-                "value": 340
+                "name": "加油",
+                "value": 3271
             },
             {
-                "name": "祝福",
-                "value": 340
+                "name": "接受",
+                "value": 3011
             },
             {
-                "name": "祝福",
-                "value": 340
+                "name": "赞",
+                "value": 2404
             },
             {
-                "name": "祝福",
-                "value": 340
+                "name": "真心",
+                "value": 1883
             }
         ],
         "negative": [{
-            "name": "分手",
-            "value": 288
-        }, {
-            "name": "分手",
-            "value": 288
-        }, {
-            "name": "分手",
-            "value": 288
-        }, {
-            "name": "分手",
-            "value": 288
-        }, {
-            "name": "分手",
-            "value": 288
-        }, {
-            "name": "分手",
-            "value": 288
-        }, {
-            "name": "分手",
-            "value": 288
-        }, {
-            "name": "分手",
-            "value": 288
-        }, {
-            "name": "分手",
-            "value": 288
-        }, {
-            "name": "分手",
-            "value": 288
-        }]
+                "name": "假",
+                "value": 4851
+            }, {
+                "name": "骂",
+                "value": 4448
+            }, {
+                "name": "不配",
+                "value": 4072
+            }, {
+                "name": "讨厌",
+                "value": 2801
+            }, {
+                "name": "呵呵",
+                "value": 2300
+            }, {
+                "name": "恶心",
+                "value": 2159
+            }, {
+                "name": "不好",
+                "value": 1951
+            }, {
+                "name": "哭",
+                "value": 1850
+            }, {
+                "name": "伤心",
+                "value": 1667
+            },
+            {
+                "name": "失恋",
+                "value": 1630
+            }
+        ]
     }
 }

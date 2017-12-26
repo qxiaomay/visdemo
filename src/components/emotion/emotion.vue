@@ -104,7 +104,7 @@ export default {
                 text:'情感值: '+res.data.score,
                 textStyle: {
                     color: 'white',
-                    fontSize: 35
+                    fontSize: 35 
                 }
             },
             tooltip: {
@@ -126,8 +126,8 @@ export default {
                 type: 'gauge',
                 // startAngle: 180,
                 // endAngle: 0,
-                min: 350,
-                max: 950,
+                min: -1000,
+                max: 1000,
                 axisLine: {
                     show: true,
                     lineStyle: {
@@ -156,31 +156,31 @@ export default {
                 axisLabel: {
                     formatter: function(e) {
                         switch (e + "") {
-                            case "410":
+                            case "-800":
                                 return "负能量";
                                 //return "";
-                            case "470":
-                                return "470";
+                            case "-600":
+                                return "-600";
 
-                            case "530":
+                            case "-400":
                                 return "消极";
                                 //return "";
-                            case "590":
-                                return "590";
+                            case "-200":
+                                return "-200";
 
-                            case "650":
+                            case "0":
                                 return "中性";
                                 //return "";
-                            case "710":
-                                return "710";
+                            case "200":
+                                return "200";
 
-                            case "770":
+                            case "400":
                                 return "积极";
                                 //return "";
-                            case "830":
-                                return "830";
+                            case "600":
+                                return "600";
 
-                            case "890":
+                            case "800":
                                 return "正能量";
                                 //return "";
                             default:
@@ -199,15 +199,15 @@ export default {
                     //show:false,
                     formatter: function(param) {
                         var level = '';
-                        if (param < 470) {
+                        if (param < -600) {
                             level = '负能量'
-                        } else if (param < 590) {
+                        } else if (param < -200) {
                             level = '消极'
-                        } else if (param < 710) {
+                        } else if (param < 200) {
                             level = '中性'
-                        } else if (param < 830) {
+                        } else if (param < 600) {
                             level = '积极'
-                        } else if (param <= 950) {
+                        } else if (param <= 1000) {
                             level = '正能量'
                         } else {
                             level = '暂无';

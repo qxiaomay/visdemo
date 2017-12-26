@@ -92,7 +92,7 @@ p
   font-size 40px
   font-weight bold
   text-align center
-  padding-bottom 2%
+  padding-bottom 1.5%
 .item
     padding: 0px;
     margin-left: -5%;
@@ -109,7 +109,7 @@ p
     height 100%
     margin:0px;
     padding:0px;
-    padding-top 3%
+    padding-top 2%
     background url('../../assets/bg1.jpg');
     background-size 100% 100%
 .flex-container.column
