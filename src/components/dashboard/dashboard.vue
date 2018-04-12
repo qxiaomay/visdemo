@@ -11,13 +11,15 @@
           <emotion></emotion>
         </div>
         <div class="item three" @click="clickChart('3')" style="transform: translate(-22.4%,12.5%) scale(0.25)">
-          <timeline></timeline>
-        </div>
-        <div class="item four" @click="clickChart('4')" style="transform: translate(-22.4%,37.5%) scale(0.25)">
           <fans></fans>
         </div>
-        <div class="item five active" @click="clickChart('5')" style="transform: translate(43.7%, 0) scale(1)">
+        <div class="item four" @click="clickChart('4')" style="transform: translate(-22.4%,37.5%) scale(0.25)">
+          
           <wordCloud></wordCloud>
+        </div>
+        <div class="item five active" @click="clickChart('5')" style="transform: translate(43.7%, 0) scale(1)">
+          
+          <timeline></timeline>
         </div>
     </div>
   </div>

@@ -21,10 +21,10 @@
 <div class="fansChart">
   <v-header :name="name" :legendArr="legendArr" :myChart="myChart"></v-header>
   <div class="main">
-    <table border="0" style="width:100%;height:100%">
+    <table border="0" style="width:100%;height:85%">
       <tr>
         <td style="width:60%!important">
-          <div class="map" style="height:600px;"></div>
+          <div class="map" style="height:100%;"></div>
         </td>
         <td style="width:40%!important;">
           <div class="cont" style=""> 
@@ -339,14 +339,14 @@ export default {
             },
             
         ],
-        label: {
-                normal: {
-                    show: true,
-                    position: 'top',
-                    formatter: '{c}',
-                    color: 'white'
-                }
-            },
+        // label: {
+        //         normal: {
+        //             show: true,
+        //             position: 'top',
+        //             formatter: '{c}',
+        //             color: 'white'
+        //         }
+        //     },
         itemStyle: {
                     normal: {
 
